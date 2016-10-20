@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easyui.min.js"></script>
+<link  type="text/css" rel="stylesheet"  href="themes/default/easyui.css"/>
+<link type="text/css" rel="stylesheet" href="themes/icon.css" />
+<script>
+	$(function(){
+		$("#userList").datagrid({		
+			fit:true,
+			fitColumns:true,
+			singleSelect:false,
+			url:'UserListServlet',
+			toolbar:[
+			{text:'查询',iconCls:'icon-reload',handler:function(){
+				$("#userList").datagrid("reload");
+			}},
+			{text:'添加',iconCls:'icon-add',handler:
+				function(){
+						var url = "user_add.html";
+						var title = "添加用户";
+						var content="<iframe src=\""+url+"\" width=\"100%\" height=\"100%\" frameborder=\"0\" scrolling=\"no\"></iframe>";
+						if(parent.$("#tt").tabs("getTab",title)!=null){
+							parent.$("#tt").tabs("select",title);
+						}else{
+							parent.$("#tt").tabs('add',{
+								title:title,
+								content:content,
+								closable:true
+							});
+						}
+				}
+			},
+			'-',
+			{text:'删除',iconCls:'icon-remove',handler:function(){
+			$.messager.confirm('确认信息','您确认要删除数据吗？',
+			function(ret){
+				if(ret){
+				
+					//执行删除操作
+					//var row=$("#userList").datagrid("getSelected");
+					var row=$("#userList").datagrid("getSelections");
+					if(row==null){
+						$.messager.alert('提示','请选择一条记录');
+						return ;
+					}
+					var ids =[] ;
+					for(var i=0; i<row.length; i++){
+					    ids.push(row[i].id);
+					}
+					//return false;
+					//通过ajax发送请求
+					$.post("DeleteStuServlet",{uid:ids},
+						function(data){
+							if(data=='1'){
+								for(var i=0; i<row.length; i++){
+								    var idx=$("#userList").datagrid("getRowIndex",row[i]);
+								    $("#userList").datagrid("deleteRow",idx);
+								}
+								$.messager.alert('提示','删除多行成功');
+							}else{
+								$.messager.alert('提示','删除失败');
+							}
+					});
+				}
+			});		
+		}}],
+		columns:[
+		[{field:'id',title:'编号',width:100,checkbox:true},
+		{field:'userName',title:'用户名',width:100,editor:'text'},
+		{field:'realName',title:'姓名',width:100,editor:'text'},
+		{field:'companyName',title:'公司',width:150,editor:'text'},
+		{field:'departName',title:'部门',width:150,
+		editor:{type:'combobox',options:{data:[{value:'技术部',text:'技术部'},{value:'生产部',text:'生产部'},{value:'计划部',text:'计划部'}]}}},
+		{field:'option',title:'操作',width:100,
+			formatter:function(value,row,index){
+				if(row.editing){
+				 var s='<a href="#" onclick="saverow('+index+')">Save</a>';
+				 return s ;
+				}else{
+				 var e='<a href="#" onclick="editrow('+index+')">Edit</a>';
+				 return e ;	
+				}
+			}
+		}]],
+		onBeforeEdit:function(index,row){
+		  row.editing = true;
+		  $('#userList').datagrid('refreshRow',index);
+		},
+		onAfterEdit:function(index,row){
+		  row.editing = false;
+		  $('#userList').datagrid('refreshRow',index);	
+		}
+		});	
+	});
+	function editrow(index){
+		var row=$("#userList").datagrid("getSelected");
+	    if(row==null){
+	    	$.messager.alert("提示","请选中你要修改的信息");
+	    	return;
+	    }
+		$('#userList').datagrid('beginEdit',index);
+	}
+	function saverow(index){
+	    $('#userList').datagrid('endEdit',index);
+	    var row=$("#userList").datagrid("getSelected");
+		dbSave(row);	
+	}
+	function dbSave(row){
+		var name  = row.userName;
+		var rName = row.realName;
+		var cName = row.companyName;
+		var pName = row.departName;
+		var id    = row.id;
+		//通过ajax发送修改请求
+		$.post("UserBizServlet",
+		     {userName:name,
+		      realName:rName,
+              companyName:cName,
+              departName:pName,
+              id:id,
+              action:'update'},
+			function(data){
+				if(data=='1'){
+					$.messager.alert('提示','修改成功');
+					//window.opener.location.reload();
+				}else{
+					$.messager.alert('提示','修改失败');
+				}
+		});
+	}
+	
+	
+ 
+</script>
+
+</head>
+
+<body>
+
+<table id="userList" class="easyui-datagrid">
+	
+</table>
+
+
+</body>
+</html>

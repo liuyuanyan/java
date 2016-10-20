@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>进销存管理</title>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easyui.min.js"></script>
+<link  type="text/css" rel="stylesheet"  href="themes/default/easyui.css"/>
+<link type="text/css" rel="stylesheet" href="themes/icon.css" />
+<style>
+	a{
+		text-decoration:none;
+	}
+</style>
+<script>
+	function addTabs(title,url){
+		
+		var content="<iframe src=\""+url+"\" width=\"100%\" height=\"100%\" frameborder=\"0\" scrolling=\"no\"></iframe>";
+		if($("#tt").tabs("getTab",title)!=null){
+			$("#tt").tabs("select",title);
+		}else{
+			$("#tt").tabs('add',{
+				title:title,
+				content:content,
+				closable:true
+			});
+		}
+	}
+</script>
+</head>
+
+<body>
+	<div class="easyui-layout" data-options="fit:true">
+    	<div  data-options="region:'north'"  
+        style="height:60px;">
+        	<iframe src="head.html" width="100%" height="100%" frameborder="0" scrolling="no">
+            </iframe>
+        </div>
+        <div data-options="region:'west',title:'西区',split:true" style="width:150px;"> 
+            <div class="easyui-accordion" data-options="fit:true">
+                <div data-options="title:'采购管理'">
+                    采购管理
+                </div>
+                <div data-options="title:'销售管理'">
+                	销售管理
+                </div>
+               <div data-options="title:'基础管理',iconCls:'icon-search'">
+                	<div>
+                    <img  src="img/admin.gif"/>
+                    <a href="#"  onclick="addTabs('往来单位管理','com_list.html')">往来单位管理</a>
+                    </div>
+                    <div>
+                    <img  src="img/admin.gif"/>
+                    <a href="#"  onclick="addTabs('配件信息管理','goods_list.html')">配件信息管理</a>
+                    </div>
+                </div>
+                 <div data-options="title:'系统管理',iconCls:'icon-system'"  style="padding:15px; font-size:12px;">
+                	<div>
+                    <img  src="img/admin.gif"/>
+                    <a href="#"  onclick="addTabs('用户管理','user_list.html')">用户管理</a>
+                    </div>
+                    <div>
+                    <img  src="img/roles.gif"/>
+                    <a href="#" onclick="addTabs('角色管理','role_list.html')">角色管理</a>
+                    </div>
+                </div>
+            </div>
+        
+        
+        </div>
+        <div data-options="region:'center',title:'中心区域'">
+        	<div id="tt" class="easyui-tabs" data-options="fit:true">
+            
+            	<div data-options="title:'主界面'"  >
+                	<iframe src="welcome.html" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+                </div>
+                
+                
+                
+                
+               
+            
+            
+            </div>
+        
+        
+        </div>
+    	<div data-options="region:'south',title:'南区'" style="height:60px;"></div>	
+    </div>
+</body>
+</html>

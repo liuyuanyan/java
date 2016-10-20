@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录</title>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easyui.min.js"></script>
+<link  type="text/css" rel="stylesheet"  href="themes/default/easyui.css"/>
+<link type="text/css" rel="stylesheet" href="themes/icon.css" />
+<script>
+	function doLogin(){
+		$("#loginFrm").form({
+			url:'LoginServlet',
+			success:function(data){
+				if(data=='1'){
+					window.location.href='index.html';
+				}
+			}
+		});
+		$("#loginFrm").submit();
+	}
+	//文档加载之后执行
+	$(function(){
+		$("#loginDialog").dialog({
+			//设置dialog的属性
+			title:'jereh进销存系统',
+			buttons:[
+				{text:'登录',handler:function(){
+					//执行表单提交
+					doLogin();
+					}},
+				{text:'注册'}
+			]
+			
+			});
+	});
+</script>
+<style>
+	#loginDialog{
+		padding-left:10px;
+		padding-top:10px;	
+	}
+</style>
+
+</head>
+<body>
+	<div id="loginDialog" class="easyui-dialog" 
+    	data-options="width:400,height:260" > 
+        <form id="loginFrm" method="post">
+        <table>
+        <tr><td>
+        	<table>
+            	<tr><td>用户名:</td><td>
+                <input type="text" name="uname"/></td></tr>
+                <tr><td>密码:</td><td>
+                <input type="password" name="upwd"/>
+                </td></tr>
+            </table>
+            </td>
+            <td>
+            	<img src="img/head.png" />
+            </td>
+          </tr>  
+         </table>
+        </form>
+      	
+        	
+     </div>
+    
+</body>
+</html>

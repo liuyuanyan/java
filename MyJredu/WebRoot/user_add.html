@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>user_add.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+<link rel="stylesheet" type="text/css" href="style/BesWeb.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easyui.min.js"></script>
+<link  type="text/css" rel="stylesheet"  href="themes/default/easyui.css"/>
+<link type="text/css" rel="stylesheet" href="themes/icon.css" />
+<script type="text/javascript">
+	function addUser(){
+		var name  = $("#name").val();
+		var rName = $("#rName").val();
+		var cName = $("#cName").val();
+		var pName = $("#pName").val();
+		var flag  = "add";
+		//通过ajax发送请求
+		$.post("UserBizServlet",
+		{userName:name,
+		 realName:rName,
+		 companyName:cName,
+		 departName:pName,
+		 action:flag},
+			function(data){
+				if(data=='1'){
+					$.messager.alert('提示','添加成功');
+				}else if(data=='2'){
+					$.messager.alert('提示','用户已存在');
+				}else{
+					$.messager.alert('提示','添加失败');
+				}
+		});
+	}
+	function reSet(){
+		$("input[type='text']").val("");
+	}
+
+
+</script>
+  </head>
+  
+  <body>
+  <center>
+    <table style="width:200" border =0>
+    	<tr>
+    		<td class=c width=100 align=center>
+    			用户名：
+    		</td>
+    		<td>
+    			<input type=text id=name width=100/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td class=c width=100 align=center>
+    			姓名：
+    		</td>
+    		<td>
+    			<input type=text id=rName width=100/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td class=c width=100 align=center>
+    			公司：
+    		</td>
+    		<td>
+    			<input type=text id=cName width=100/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td class=c width=100 align=center>
+    			部门：
+    		</td>
+    		<td>
+    			<input id="cc" class="easyui-combobox" name="dept"   
+    data-options="valueField:'value',textField:'text',url:'ComboboxServlet'" />  
+    		</td>
+    	</tr>
+    	<tr>
+    		<td align=center colspan=2>
+    			<input type=button id=bt_add value=确定 onclick="addUser();" ></input>
+    			<input type=button id=bt_reset value=重置 onclick="reSet();" ></input>
+    		</td>
+    		
+    	</tr>
+    </table>
+  </body>
+</html>

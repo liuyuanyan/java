@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easyui.min.js"></script>
+<link  type="text/css" rel="stylesheet"  href="themes/default/easyui.css"/>
+<link type="text/css" rel="stylesheet" href="themes/icon.css" />
+<script>
+	$(function(){
+		$("#goodsList").datagrid({		
+			fit:true,
+			fitColumns:true,
+			singleSelect:false,
+			url:'GoodsServlet?action=select',
+			toolbar:[
+			{text:'查询',iconCls:'icon-reload',handler:function(){
+				$("#goodsList").datagrid("reload");
+			}},
+			{text:'添加',iconCls:'icon-add',handler:
+				function(){
+						var url = "goods_add.html";
+						var title = "添加配件信息";
+						var content="<iframe src=\""+url+"\" width=\"100%\" height=\"100%\" frameborder=\"0\" scrolling=\"no\"></iframe>";
+						if(parent.$("#tt").tabs("getTab",title)!=null){
+							parent.$("#tt").tabs("select",title);
+						}else{
+							parent.$("#tt").tabs('add',{
+								title:title,
+								content:content,
+								closable:true
+							});
+						}
+				}
+			},
+			'-',
+			{text:'删除',iconCls:'icon-remove',handler:function(){
+			$.messager.confirm('确认信息','您确认要删除数据吗？',
+			function(ret){
+				if(ret){
+				
+					//执行删除操作
+					//var row=$("#goodsList").datagrid("getSelected");
+					var row=$("#goodsList").datagrid("getSelections");
+					if(row==null){
+						$.messager.alert('提示','请选择一条记录');
+						return ;
+					}
+					var ids =[] ;
+					for(var i=0; i<row.length; i++){
+					    ids.push(row[i].goodsId);
+					}
+					//return false;
+					//通过ajax发送请求
+					$.post("GoodsServlet",{uid:ids,action:'delete'},
+						function(data){
+							if(data=='1'){
+								for(var i=0; i<row.length; i++){
+								    var idx=$("#goodsList").datagrid("getRowIndex",row[i]);
+								    $("#goodsList").datagrid("deleteRow",idx);
+								}
+								$.messager.alert('提示','删除多行成功');
+							}else{
+								$.messager.alert('提示','删除失败');
+							}
+					});
+				}
+			});		
+		}}],
+		columns:[
+		[{field:'id',title:'编号',width:100,checkbox:true},
+		{field:'goodsId',title:'配件编号',width:100},
+		{field:'goodsName',title:'配件名称',width:100,editor:'text'},
+		{field:'price',title:'配件单价',width:100,editor:'numberbox'},
+		{field:'goodsCom',title:'供应商',width:150,
+		editor:{type:'combobox',options:{url:'ComboboxServlet'}}},
+		{field:'option',title:'操作',width:100,
+			formatter:function(value,row,index){
+				if(row.editing){
+				 var s='<a href="#" onclick="saverow('+index+')">Save</a>';
+				 return s ;
+				}else{
+				 var e='<a href="#" onclick="editrow('+index+')">Edit</a>';
+				 return e ;	
+				}
+			}
+		}]],
+		onBeforeEdit:function(index,row){
+		  row.editing = true;
+		  $('#goodsList').datagrid('refreshRow',index);
+		},
+		onAfterEdit:function(index,row){
+		  row.editing = false;
+		  $('#goodsList').datagrid('refreshRow',index);	
+		}
+		});	
+	});
+	function editrow(index){
+		var row=$("#goodsList").datagrid("getSelected");
+	    if(row==null){
+	    	$.messager.alert("提示","请选中你要修改的信息");
+	    	return;
+	    }
+		$('#goodsList').datagrid('beginEdit',index);
+	}
+	function saverow(index){
+	    $('#goodsList').datagrid('endEdit',index);
+	    var row=$("#goodsList").datagrid("getSelected");
+		dbSave(row);	
+	}
+	function dbSave(row){
+		var goodsId   = row.goodsId;
+		var goodsName = row.goodsName;
+		var price     = row.price;
+		var goodsCom  = row.goodsCom;
+		
+		//通过ajax发送修改请求
+		$.post("GoodsServlet",
+		     {goodsId:goodsId,
+		      goodsName:goodsName,
+              price:price,
+              goodsCom:goodsCom,
+              action:'update'},
+			function(data){
+				if(data=='1'){
+					$.messager.alert('提示','修改成功');
+					//window.opener.location.reload();
+				}else{
+					$.messager.alert('提示','修改失败');
+				}
+		});
+	}
+	
+	
+ 
+</script>
+
+</head>
+
+<body>
+
+<table id="goodsList" class="easyui-datagrid">
+	
+</table>
+
+
+</body>
+</html>

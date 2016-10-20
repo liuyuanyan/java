@@ -1,0 +1,45 @@
+<html>
+<head>
+<script language="javascript">
+var nCount = 0;
+var nStep = 1;
+function start()
+{
+	//step0.style.background="#0000FF";
+	if(nStep == 1)
+		eval("step"+nCount+".style.background='#0000FF'");
+	else
+		eval("step"+nCount+".style.background='#FFFFFF'");
+
+	nCount += nStep;
+	if(nCount == 20)
+	{
+		nCount = 19;
+		nStep = -1;
+	} else if(nCount == -1)
+	{
+		nCount = 0;
+		nStep = 1;
+	}
+	setTimeout("start()", 300);
+}
+</script>
+</head>
+<body onload="start();" bgcolor="#B0C4DE">
+<br>
+<center>
+<div style="border:1px solid black; width:202px; font:7px; height:7px;">
+<script language="JavaScript">
+for(i=0; i < 20; i++)
+{
+	document.write("<span id=step" + i + " style=\"font:7px; height:7px; width:10px;background:#FFFFFF\"></span>");
+}
+</script>
+</div>
+<br>
+<span style="font:12px;color: blue;"> While controlling data ... </span>
+</center>
+
+</body>
+</html>
+

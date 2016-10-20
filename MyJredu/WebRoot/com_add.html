@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>user_add.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+<link rel="stylesheet" type="text/css" href="style/BesWeb.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easyui.min.js"></script>
+<link  type="text/css" rel="stylesheet"  href="themes/default/easyui.css"/>
+<link type="text/css" rel="stylesheet" href="themes/icon.css" />
+<script type="text/javascript">
+	function addUser(){
+		var comId  = $("#comId").val();
+		var comName = $("#comName").val();
+		var comType = $("#comType").val();
+		var flag  = "add";
+		//通过ajax发送请求
+		$.post("CompanyServlet",
+		{comId:comId,
+		 comName:comName,
+		 comType:comType,
+		 action:flag},
+			function(data){
+				if(data=='1'){
+					$.messager.alert('提示','添加成功');
+				}else if(data=='2'){
+					$.messager.alert('提示','用户已存在');
+				}else{
+					$.messager.alert('提示','添加失败');
+				}
+		});
+	}
+	function reSet(){
+		$("input[type='text']").val("");
+	}
+
+
+</script>
+  </head>
+  
+  <body>
+  <center>
+    <table style="width:400" border =0>
+    	<tr>
+    		<td class=c width=100 align=center>
+    			单位编号：
+    		</td>
+    		<td>
+    			<input type=text id=comId width=*/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td class=c width=100 align=center>
+    			单位名称：
+    		</td>
+    		<td>
+    			<input type=text id=comName width=*/>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td class=c width=100 align=center>
+    			单位类型：
+    		</td>
+    		<td width=*>
+    			<select id=comType>
+    				<option value = 'A'>A:客户</option>
+    				<option value = 'B'>B:供应商</option>
+    			</select>
+    		</td>
+    	</tr>
+    
+    	<tr>
+    		<td align=center colspan=2>
+    			<input type=button id=bt_add value=确定 onclick="addUser();" ></input>
+    			<input type=button id=bt_reset value=重置 onclick="reSet();" ></input>
+    		</td>
+    		
+    	</tr>
+    </table>
+  </body>
+</html>

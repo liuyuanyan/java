@@ -1,0 +1,507 @@
+@CHARSET "UTF-8";
+
+
+A:LINK {COLOR:5E564C; TEXT-DECORATION:NONE;}
+A:ACVITE {COLOR:5E564C;} A:VISITED {COLOR:5E564C; TEXT-DECORATION:NONE;}
+A:HOVER {COLOR:5E564C; TEXT-DECORATION:NONE;}
+
+BODY{FONT-SIZE: 9pt; COLOR: #333333; FONT-FAMILY:Arial;
+    scrollbar-face-color: #F8F8F8;
+	scrollbar-shadow-color:#B3B3B3;
+	scrollbar-highlight-color:#B3B3B3;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-darkshadow-color: #FFFFFF;
+	scrollbar-track-color: #DDDDDD;
+	scrollbar-arrow-color: #8B9EA6;}
+
+.scroll_div { 
+	scrollbar-face-color: #F8F8F8;
+	scrollbar-shadow-color:#B3B3B3;
+	scrollbar-highlight-color:#B3B3B3;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-darkshadow-color: #FFFFFF;
+	scrollbar-track-color: #DDDDDD;
+	scrollbar-arrow-color: #8B9EA6;}
+
+H3 {text-align:center; COLOR:BLUE}
+H6 {FONT:9PT; text-align:center COLOR:4f4f4f}
+
+DIV.fix{
+	DISPLAY:inline;Z-INDEX:107;LEFT:10;overflow:auto;WIDTH:100%;POSITION:absolute;
+}
+
+CAPTION { FONT:bold 16px; COLOR:333399; BACKGROUND:#FFFFFF; text-align:center;
+vertical-align:middle;FONT-FAMILY:Arial;}
+
+.list {border:1px solid #87ADD7;}
+.Tex {background:CCCCFF;}
+.badvalue {background:red; color:white}
+.pgm {FONT:8PT;}
+.prompt {background:EFF7EE; text-align:center; vertical-align:bottom; FONT:9PT;FONT-FAMILY:Arial;}
+.del {FONT:BOLD 16PT; COLOR:RED;} .
+menubar { color: white; background-color: blue; width: 100% }
+
+A.menulink:link { font-size: 11pt; color: white; background-color: blue; }
+A.menulink:active { font-size: 11pt; color: white; background-color: blue; }
+A.menulink:visited { font-size: 11pt; color: white; background-color: blue; }
+.menuitemdiv { width: 110pt; border-style: solid; border-width: 1px; margin:
+1px; padding: 0px; background-color: blue; postion: absolute; visibility: hidden}
+A.menuitemlink:link { color: white; font-size: 10pt; }
+A.menuitemlink:active { color: white; font-size: 10pt; }
+A.menuitemlink:visited { color: white; font-size: 10pt; }
+
+textarea{border:1px solid #8D9BA9; font-family:ARIAL; font-size:11px; }
+select,input{
+		FONT-SIZE: 11PX; COLOR:BLACK; FONT-FAMILY: ARIAL;
+		TEXT-ALIGN: LEFT; FONT-WEIGHT: lighter; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+		BORDER-RIGHT: #7F9DB9 1px SOLID;
+        BORDER-LEFT: #7F9DB9 1px SOLID; 
+		BORDER-TOP: #7F9DB9 1px SOLID; 
+		BORDER-BOTTOM:#7F9DB9 1px SOLID; }
+    	
+
+/************************************/
+/**************** TH ****************/
+/************************************/
+
+TH {FONT:9PT; font-family: "Arial"; color:#555555; height:19;
+    BACKGROUND:#E8E8E8; TEXT-ALIGN:CENTER;BORDER-top:#A9A9A9 2px SOLID;
+	BORDER-left:#A9A9A9 1px SOLID;BORDER-BOTTOM:#A9A9A9 1px SOLID;
+    BORDER-RIGHT: #A9A9A9 1px SOLID; vertical-align:  middle }
+TH.head {FONT:9PT; font-family: "Arial"; color:#555555; height:30;
+    BACKGROUND:#E8E8E8; TEXT-ALIGN:CENTER;BORDER-top:#A9A9A9 2px SOLID;
+	BORDER-left:#A9A9A9 1px SOLID;BORDER-BOTTOM:#A9A9A9 1px SOLID;
+    BORDER-RIGHT: #A9A9A9 1px SOLID; vertical-align:  middle }    
+
+/************************************/
+/**************** TD ****************/
+/************************************/
+
+TD.i_in {FONT:9PT; font-family:Arial; color:#5E564C; height:19;
+BACKGROUND:#CCFFFF; TEXT-ALIGN:CENTER; BORDER-RIGHT: #A9A9A9 1px SOLID;
+BORDER-LEFT: #A9A9A9 1px SOLID; BORDER-TOP: #A9A9A9 1px SOLID; BORDER-BOTTOM:
+#A9A9A9 1px SOLID; height:19;}
+
+TD.c_in {FONT:9PT; FONT-FAMILY:Arial;  height:19; BACKGROUND:#FAFAFA;
+BORDER-BOTTOM: #A9A9A9 1px; vertical-align: middle;BORDER-RIGHT: #A9A9A9 1px
+SOLID; BORDER-LEFT: #A9A9A9 1px SOLID; BORDER-TOP: #A9A9A9 1px SOLID;
+BORDER-BOTTOM: #A9A9A9 1px SOLID;}
+
+TD.t_in {font-family:Arial; font-size: 9pt; color:#4F4F30;font-weight: bold; height:19;
+BACKGROUND:#F5F4D6; TEXT-ALIGN:CENTER; BORDER-RIGHT: #D3D29C 1px SOLID;
+BORDER-LEFT: #D3D29C 1px SOLID; BORDER-TOP: #D3D29C 1px SOLID; BORDER-BOTTOM:
+#D3D29C 1px SOLID; height:19;}
+
+TD.not_rows {
+    FONT:  "arial";
+    font-size:9pt; 
+    text-decoration:none; 
+    TEXT-ALIGN:CENTER;
+    background-color:F7F7F7;
+    color : #040404; 
+}
+
+TD {FONT:9pt "Arial";}
+TD.bd_contents	{background-color:#FAFAFA; color:#555555; font-family: "Verdana", "굴림"; font-size:12px; line-height:17px; letter-spacing:0} /* board contents color */
+TD.a {FONT:9PT; FONT-FAMILY:Arial;  height:19; BACKGROUND:#FAFAFA; }
+TD.b {FONT:9PT; FONT-FAMILY:Arial;  height:19;  BACKGROUND:#F4F4F4;; }
+
+TD.c {FONT:9PT; FONT-FAMILY:Arial;  height:19; BACKGROUND:#FAFAFA;
+BORDER-BOTTOM: #CED3C6 1px; vertical-align: middle;BORDER-RIGHT: #CED3C6 1px
+SOLID; BORDER-LEFT: #CED3C6 1px SOLID; BORDER-TOP: #CED3C6 1px SOLID;
+BORDER-BOTTOM: #CED3C6 1px SOLID;}
+
+TD.i {FONT:9PT; font-family:Arial; color:#5E564C; height:19;
+BACKGROUND:#E8E8E8; TEXT-ALIGN:CENTER; BORDER-RIGHT: #A9A9A9 1px SOLID;
+BORDER-LEFT: #A9A9A9 1px SOLID; BORDER-TOP: #A9A9A9 2px SOLID; BORDER-BOTTOM:
+#A9A9A9 1px SOLID; height:19;}
+
+TD.i2 {FONT:9PT; FONT-FAMILY:Arial; color:#3F526C; height:19;
+BACKGROUND:#D6E4F7; TEXT-ALIGN:CENTER; BORDER-RIGHT: #10497b 1px SOLID;
+BORDER-LEFT: #BAD7DC 1px SOLID; BORDER-TOP: #BAD7DC 1px SOLID; BORDER-BOTTOM:
+#10497b 1px SOLID; height:27;}
+
+TD.i3 {FONT:12PT; font-family:Arial; color:#5E564C; height:19;
+BACKGROUND:#E8E8E8; TEXT-ALIGN:CENTER; BORDER-RIGHT: #A9A9A9 1px SOLID;
+BORDER-LEFT: #A9A9A9 1px SOLID; BORDER-TOP: #A9A9A9 2px SOLID; BORDER-BOTTOM:
+#A9A9A9 1px SOLID; height:27;}
+
+TD.t {font-family:Arial; font-size: 9pt; color:#004FA0;font-weight: bold; height:19;
+BACKGROUND:#E8E8E8; TEXT-ALIGN:CENTER; BORDER-RIGHT: #A9A9A9 1px SOLID;
+BORDER-LEFT: #A9A9A9 1px SOLID; BORDER-TOP: #A9A9A9 2px SOLID; BORDER-BOTTOM:
+#A9A9A9 1px SOLID; height:19;}
+
+
+TD.kak {FONT:9PT; FONT-FAMILY:Arial; color:#3F526C; height:19;
+BACKGROUND:#96d5ff; BORDER-RIGHT: #10497b 1px SOLID;
+BORDER-LEFT: #BAD7DC 1px SOLID; BORDER-TOP: #BAD7DC 1px SOLID; BORDER-BOTTOM:
+#10497b 1px SOLID; height:19;}
+
+TD.p {FONT:9PT; FONT-FAMILY:Arial; color:#22344C; height:19;
+BACKGROUND:#D6E4F7; TEXT-ALIGN:CENTER; BORDER-RIGHT: #10497b 1px SOLID;
+BORDER-LEFT: #BAD7DC 1px SOLID; BORDER-TOP: #BAD7DC 1px SOLID; BORDER-BOTTOM:
+#10497b 1px SOLID; height:19;}
+
+TD.x {FONT:9PT; FONT-FAMILY:Arial; color:#3F526C; height:19;
+BACKGROUND:#D6E4F7; TEXT-ALIGN:LEFT; BORDER-RIGHT: #10497b 1px SOLID;
+BORDER-LEFT: #BAD7DC 1px SOLID; BORDER-TOP: #BAD7DC 1px SOLID; BORDER-BOTTOM:
+#10497b 1px SOLID; height:19;}
+
+TD.y {FONT:9PT; FONT-FAMILY:Arial; color:#3F526C; height:19;
+BACKGROUND:#D6E4F7; TEXT-ALIGN:RIGHT; BORDER-RIGHT: #10497b 1px SOLID;
+BORDER-LEFT: #BAD7DC 1px SOLID; BORDER-TOP: #BAD7DC 1px SOLID; BORDER-BOTTOM:
+#10497b 1px SOLID; height:19;}
+
+TD.d {FONT:9PT; FONT-FAMILY:Arial;  height:19; BACKGROUND:C3E5FF;
+TEXT-ALIGN:CENTER; vertical-align:  middle}
+
+TD.e {BACKGROUND:FADEDE}
+
+TD.l {FONT:9pt "Arial"; color:#ffffff; height:19;  TEXT-ALIGN:left;
+BORDER-RIGHT: #D6E4F7 1px SOLID; PADDING-LEFT: 5px; BORDER-LEFT: #D6E4F7 1px
+SOLID; BORDER-TOP: #F6f8fb 1px SOLID; cursor:hand; vertical-align:  middle;}
+
+TD.l1 {FONT:9pt "Arial"; color:#000000; height:25; TEXT-ALIGN:left;
+PADDING-LEFT: 5px; cursor:hand; vertical-align : middle;  BORDER-BOTTOM: #B8BDC4
+1px SOLID;}
+
+TD.l2 {FONT:9pt "Arial"; color:#000000; height:19;
+BACKGROUND:#C9D6F7; TEXT-ALIGN:left;  PADDING-LEFT: 15px; BORDER-BOTTOM: #ffffff
+1px solid; cursor:hand; vertical-align: middle; line-height : 120%}
+
+TD.reqed
+{
+	BORDER-RIGHT: #766B6B 1px SOLID;
+	BORDER-LEFT: #766B6B 1px SOLID;
+	BORDER-TOP: #766B6B 1px SOLID;
+	BORDER-BOTTOM: #766B6B 1px SOLID;
+	BACKGROUND-COLOR: #D1CCCC;
+	FONT-WEIGHT: lighter;
+	FONT-SIZE: 12px;
+	COLOR: black;
+	FONT-FAMILY: Arial;
+	vertical-align: middle;
+}
+
+/************************************/
+/**************** TR ****************/
+/************************************/
+
+TR.A {FONT:9PT; FONT-FAMILY:Arial;  height:19;  cursor:hand; BACKGROUND:#FAFAFA;}
+TR.B {FONT:9PT; FONT-FAMILY:Arial;  height:19;  cursor:hand; BACKGROUND:#F4F4F4; }
+TR.C {FONT:9PT; FONT-FAMILY:Arial;  height:19;  cursor:hand; BACKGROUND:#DCE5EF;}
+
+TR.A2 {FONT:9PT; FONT-FAMILY:Arial;  height:19;  cursor:none; BACKGROUND:#FAFAFA;}
+TR.B2 {FONT:9PT; FONT-FAMILY:Arial;  height:19;  cursor:none; BACKGROUND:#F4F4F4;}
+TR.C2 {FONT:9PT; FONT-FAMILY:Arial;  height:19;  cursor:none; BACKGROUND:#DCE5EF;}
+
+TR.BOM0 {FONT:9PT; FONT-FAMILY:Arial;  height:19;  cursor:hand; BACKGROUND:#FFEBCD;}
+TR.BOM1 {FONT:9PT; FONT-FAMILY:Arial;  height:19;  cursor:hand; BACKGROUND:#87CEFA;}
+TR.BOM2 {FONT:9PT; FONT-FAMILY:Arial;  height:19;  cursor:hand; BACKGROUND:#ADD8E6;}
+TR.BOM3 {FONT:9PT; FONT-FAMILY:Arial;  height:19;  cursor:hand; BACKGROUND:#DCDCDC;}
+TR.BOM4 {FONT:9PT; FONT-FAMILY:Arial;  height:19;  cursor:hand; BACKGROUND:#F5F5F5;}
+
+TR.X {FONT:9PT; FONT-FAMILY:Arial;  height:19;  BACKGROUND:#D3D3D3;}
+TR.D {FONT:9PT; FONT-FAMILY:Arial;  height:19;  BACKGROUND:#C0C0C0;}
+/************************************/
+/************** INPUT ***************/
+/************************************/
+
+INPUT.radio
+{
+    #BORDER-RIGHT:  0px;
+    #BORDER-LEFT: 0px;
+    #BORDER-TOP:  0px;
+    #BORDER-BOTTOM:  0px;
+    VERTICAL-ALIGN: MIDDLE;
+}
+
+/* STAND TYPE - TEXT-ALIGN : LEFT, FONT COLOR : BLACK */
+.input { 
+		FONT-SIZE: 11PX; COLOR: BLACK; FONT-FAMILY: ARIAL;
+		TEXT-ALIGN: LEFT; FONT-WEIGHT: lighter; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+/* STAND TYPE - TEXT-ALIGN : LEFT, FONT COLOR : BLACK */
+.input_LF_BK { 
+		FONT-SIZE: 11PX; COLOR: BLACK; FONT-FAMILY: ARIAL;
+		TEXT-ALIGN: LEFT; FONT-WEIGHT: lighter; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+.input_AERA{
+		FONT-SIZE: 11PX; COLOR: BLACK; FONT-FAMILY: ARIAL;
+		TEXT-ALIGN: LEFT; FONT-WEIGHT: lighter; VERTICAL-ALIGN: BOTTOM; 
+	
+}
+/* STAND TYPE - TEXT-ALIGN : CENTER, FONT COLOR : BLACK */
+.input_CT_BK { 
+		FONT-SIZE: 11PX; COLOR: BLACK; FONT-FAMILY: ARIAL;
+		TEXT-ALIGN: CENTER; FONT-WEIGHT: lighter; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+/* STAND TYPE - TEXT-ALIGN : RIGHT, FONT COLOR : BLACK */
+.input_RT_BK { 
+    	FONT-SIZE: 11PX; COLOR: BLACK; FONT-FAMILY: ARIAL;
+    	TEXT-ALIGN: RIGHT; FONT-WEIGHT: lighter; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+/* STAND TYPE - TEXT-ALIGN : LEFT, FONT COLOR : BLUE */
+.input_LF_BL { 
+		FONT-SIZE: 11PX; COLOR: BLUE; FONT-FAMILY: ARIAL;
+		TEXT-ALIGN: LEFT; FONT-WEIGHT: lighter; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+/* STAND TYPE - TEXT-ALIGN : CENTER, FONT COLOR : BLUE */
+.input_CT_BL { 
+		FONT-SIZE: 11PX; COLOR: BLUE; FONT-FAMILY: ARIAL;
+		TEXT-ALIGN: CENTER; FONT-WEIGHT: lighter; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+/* STAND TYPE - TEXT-ALIGN : RIGHT, FONT COLOR : BLUE */
+.input_RT_BL { 
+    	FONT-SIZE: 11PX; COLOR: BLUE; FONT-FAMILY: ARIAL;
+    	TEXT-ALIGN: RIGHT; FONT-WEIGHT: lighter; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+/* STAND TYPE - TEXT-ALIGN : LEFT, FONT COLOR : RED */
+.input_LF_RD { 
+		FONT-SIZE: 11PX; COLOR: RED; FONT-FAMILY: ARIAL;
+		TEXT-ALIGN: LEFT; FONT-WEIGHT: lighter; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+/* STAND TYPE - TEXT-ALIGN : CENTER, FONT COLOR : RED */
+.input_CT_RD { 
+		FONT-SIZE: 11PX; COLOR: RED; FONT-FAMILY: ARIAL;
+		TEXT-ALIGN: CENTER; FONT-WEIGHT: lighter; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+/* STAND TYPE - TEXT-ALIGN : RIGHT, FONT COLOR : RED */
+.input_RT_RD { 
+        BORDER-RIGHT: #B9B5A6 1px SOLID; BORDER-LEFT: #B9B5A6 1px SOLID;
+        BORDER-TOP: #B9B5A6 1px SOLID; BORDER-BOTTOM: #B9B5A6 1px SOLID;		
+    	FONT-SIZE: 11PX; COLOR: RED; FONT-FAMILY: ARIAL;
+    	TEXT-ALIGN: RIGHT; FONT-WEIGHT: lighter; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+.nobrd_RT_RD { 
+        BORDER-RIGHT: #DDDDDD 1px SOLID; BORDER-LEFT: #DDDDDD 1px SOLID;
+        BORDER-TOP: #DDDDDD 1px SOLID; BORDER-BOTTOM: #DDDDDD 1px SOLID;		
+        BACKGROUND-COLOR: #EEEEEE; 
+    	FONT-SIZE: 11PX; COLOR: RED; FONT-FAMILY: ARIAL;
+    	TEXT-ALIGN: CENTER; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+/* NO BORDER - TEXT-ALIGN : LEFT, FONT COLOR : BLACK */
+.nobrd { 
+        BORDER-RIGHT: #DDDDDD 1px SOLID; BORDER-LEFT: #DDDDDD 1px SOLID;
+        BORDER-TOP: #DDDDDD 1px SOLID; BORDER-BOTTOM: #DDDDDD 1px SOLID;		
+        BACKGROUND-COLOR: #EEEEEE; 
+    	FONT-SIZE: 11PX; COLOR: BLACK; FONT-FAMILY: ARIAL;
+    	TEXT-ALIGN: LEFT; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+/* NO BORDER - TEXT-ALIGN : LEFT, FONT COLOR : BLACK */
+.nobrd_LF_BK { 
+        BORDER-RIGHT: #DDDDDD 1px SOLID; BORDER-LEFT: #DDDDDD 1px SOLID;
+        BORDER-TOP: #DDDDDD 1px SOLID; BORDER-BOTTOM: #DDDDDD 1px SOLID;		
+        BACKGROUND-COLOR: #EEEEEE; 
+    	FONT-SIZE: 11PX; COLOR: BLACK; FONT-FAMILY: ARIAL;
+    	TEXT-ALIGN: LEFT; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+/* NO BORDER - TEXT-ALIGN : CENTER, FONT COLOR : BLACK */
+.nobrd_CT_BK { 
+        BORDER-RIGHT: #DDDDDD 1px SOLID; BORDER-LEFT: #DDDDDD 1px SOLID;
+        BORDER-TOP: #DDDDDD 1px SOLID; BORDER-BOTTOM: #DDDDDD 1px SOLID;		
+        BACKGROUND-COLOR: #EEEEEE; 
+    	FONT-SIZE: 11PX; COLOR: BLACK; FONT-FAMILY: ARIAL;
+    	TEXT-ALIGN: CENTER; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+.cng_CT_BK { 
+        BORDER-RIGHT: #DDDDDD 1px SOLID; BORDER-LEFT: #DDDDDD 1px SOLID;
+        BORDER-TOP: #DDDDDD 1px SOLID; BORDER-BOTTOM: #DDDDDD 1px SOLID;		
+        BACKGROUND-COLOR: #A74F62; 
+    	FONT-SIZE: 11PX; COLOR: BLACK; FONT-FAMILY: ARIAL;
+    	TEXT-ALIGN: CENTER; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+/* NO BORDER - TEXT-ALIGN : RIGHT, FONT COLOR : BLACK */
+.nobrd_RT_BK { 
+        BORDER-RIGHT: #DDDDDD 1px SOLID; BORDER-LEFT: #DDDDDD 1px SOLID;
+        BORDER-TOP: #DDDDDD 1px SOLID; BORDER-BOTTOM: #DDDDDD 1px SOLID;		
+        BACKGROUND-COLOR: #EEEEEE; 
+    	FONT-SIZE: 11PX; COLOR: BLACK; FONT-FAMILY: ARIAL;
+    	TEXT-ALIGN: RIGHT; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+/* NO BORDER - TEXT-ALIGN : LEFT, FONT COLOR : BLUE */
+.nobrd_LF_BL { 
+        BORDER-RIGHT: #DDDDDD 1px SOLID; BORDER-LEFT: #DDDDDD 1px SOLID;
+        BORDER-TOP: #DDDDDD 1px SOLID; BORDER-BOTTOM: #DDDDDD 1px SOLID;		
+        BACKGROUND-COLOR: #EEEEEE; 
+    	FONT-SIZE: 11PX; COLOR: BLUE; FONT-FAMILY: ARIAL;
+    	TEXT-ALIGN: LEFT; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+/* NO BORDER - TEXT-ALIGN : CENTER, FONT COLOR : BLUE */
+.nobrd_CT_BL { 
+        BORDER-RIGHT: #DDDDDD 1px SOLID; BORDER-LEFT: #DDDDDD 1px SOLID;
+        BORDER-TOP: #DDDDDD 1px SOLID; BORDER-BOTTOM: #DDDDDD 1px SOLID;				
+        BACKGROUND-COLOR: #EEEEEE; 
+    	FONT-SIZE: 11PX; COLOR: BLUE; FONT-FAMILY: ARIAL;
+    	TEXT-ALIGN: CENTER; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+/* NO BORDER - TEXT-ALIGN : RIGHT, FONT COLOR : BLUE */
+.nobrd_RT_BL { 
+        BORDER-RIGHT: #DDDDDD 1px SOLID; BORDER-LEFT: #DDDDDD 1px SOLID;
+        BORDER-TOP: #DDDDDD 1px SOLID; BORDER-BOTTOM: #DDDDDD 1px SOLID;		
+        BACKGROUND-COLOR: #EEEEEE; 
+    	FONT-SIZE: 11PX; COLOR: BLUE; FONT-FAMILY: ARIAL;
+    	TEXT-ALIGN: RIGHT; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+/* NO BORDER - TEXT-ALIGN : LEFT, FONT COLOR : RED */
+.nobrd_LF_RD { 
+        BORDER-RIGHT: #DDDDDD 1px SOLID; BORDER-LEFT: #DDDDDD 1px SOLID;
+        BORDER-TOP: #DDDDDD 1px SOLID; BORDER-BOTTOM: #DDDDDD 1px SOLID;		
+        BACKGROUND-COLOR: #EEEEEE; 
+    	FONT-SIZE: 11PX; COLOR: RED; FONT-FAMILY: ARIAL;
+    	TEXT-ALIGN: LEFT; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+/* NO BORDER - TEXT-ALIGN : CENTER, FONT COLOR : RED */
+.nobrd_CT_RD { 
+        BORDER-RIGHT: #DDDDDD 1px SOLID; BORDER-LEFT: #DDDDDD 1px SOLID;
+        BORDER-TOP: #DDDDDD 1px SOLID; BORDER-BOTTOM: #DDDDDD 1px SOLID;		
+        BACKGROUND-COLOR: #EEEEEE; 
+    	FONT-SIZE: 11PX; COLOR: RED; FONT-FAMILY: ARIAL;
+    	TEXT-ALIGN: CENTER; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+/* NO BORDER - TEXT-ALIGN : RIGHT, FONT COLOR : RED */
+.nobrd_RT_RD { 
+        BORDER-RIGHT: #DDDDDD 1px SOLID; BORDER-LEFT: #DDDDDD 1px SOLID;
+        BORDER-TOP: #DDDDDD 1px SOLID; BORDER-BOTTOM: #DDDDDD 1px SOLID;				
+        BACKGROUND-COLOR: #EEEEEE; 
+    	FONT-SIZE: 11PX; COLOR: RED; FONT-FAMILY: ARIAL;
+    	TEXT-ALIGN: RIGHT; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+.input_0	{ color:#505050;  border:1 solid #CDCDCD; background-color:#FAFAFA;}
+
+
+/* Control input text type disable style */
+.CtrlDisable {
+    width: 100%; background: #EAEDE1; border: 0; text-align: center; vertical-align: middle;
+}
+
+
+.nobrd_tab { 
+        BORDER-RIGHT: #EFF4F7 1px SOLID; BORDER-LEFT: #EFF4F7 1px SOLID;
+        BORDER-TOP: #EFF4F7 1px SOLID; BORDER-BOTTOM: #EFF4F7 1px SOLID;		
+        BACKGROUND-COLOR: #EFF4F7; 
+    	FONT-SIZE: 11PX; COLOR: BLACK; FONT-FAMILY: ARIAL;
+    	TEXT-ALIGN: LEFT; VERTICAL-ALIGN: BOTTOM; HEIGHT:19;
+}
+
+
+.textDeft  {BACKGROUND:#FFFFFF; vertical-align: middle;}
+.textError {BACKGROUND:#D4D6BA; vertical-align: middle;}
+.textTrsp  {BACKGROUND:transparent; width:95%; vertical-align: middle; border:0;}
+.textTrspR {BACKGROUND:transparent; width:95%; text-align:right; vertical-align: middle; border:0;}
+.textTrspL {BACKGROUND:transparent; width:95%; text-align:left; vertical-align: middle; border:0;}
+.textTrspC {BACKGROUND:transparent; width:95%; text-align:center; vertical-align: middle; border:0;}
+
+Table.leftFix { margin-left:5px }
+   tr.fix{position:relative;top:expression(this.offsetParent.scrollTop);z-index:100; background-color:#E8E8E8;}
+   	tr.fix1{position:relative;top:expression(this.offsetParent.scrollTop);z-index:99; background-color:#E8E8E8;}
+    th.fix{position:relative;top:expression(this.offsetParent.scrollTop);z-index:10; background:#E8E8E8;}
+
+ 	#fixedColumn {
+        position: relative;
+    }
+    #FixedTitleColumn {
+        position: relative;
+       	left: expression(this.parentElement.offsetParent.scrollLeft);
+    }
+     #FixedDataColumn {
+        position: relative;
+       	left: expression(this.parentElement.offsetParent.parentElement.scrollLeft);
+    }
+table.tf thead th{position:relative;}
+table.tf thead tr{z-index:100;position:relative;top:expression(this.offsetParent.scrollTop);}    
+table.tf thead td{z-index:400;position:relative;left:expression(this.parentElement.offsetParent.scrollLeft);
+					FONT:9PT; font-family:Arial; color:#5E564C; height:19;
+					BACKGROUND:#E8E8E8; TEXT-ALIGN:CENTER; BORDER-RIGHT: #A9A9A9 1px SOLID;
+					BORDER-LEFT: #A9A9A9 1px SOLID; BORDER-TOP: #A9A9A9 2px SOLID; BORDER-BOTTOM:#A9A9A9 1px SOLID; }
+ 
+
+
+input.required {
+	width:100%;
+	text-align:center;
+}
+
+
+input.error {
+	width:100%;
+	text-align:center;
+	border:1px solid red;
+}
+
+
+span.error {
+	width:100%;
+	border:1px solid red;
+}
+
+span.dis_left {
+	FONT-SIZE: 11PX; 
+	COLOR: BLACK; 
+	FONT-FAMILY: ARIAL;
+	TEXT-ALIGN: left; 
+	FONT-WEIGHT: lighter; 
+	VERTICAL-ALIGN: middle; 
+	HEIGHT:10;
+	width: 100%;
+}
+
+span.dis_right {
+	FONT-SIZE: 11PX; 
+	COLOR: BLACK; 
+	FONT-FAMILY: ARIAL;
+	TEXT-ALIGN: right; 
+	FONT-WEIGHT: lighter; 
+	VERTICAL-ALIGN: middle; 
+	HEIGHT:18;
+	width: 100%;
+}
+
+span.dis_center {
+	FONT-SIZE: 11PX; 
+	COLOR: BLACK; 
+	FONT-FAMILY: ARIAL;
+	TEXT-ALIGN: center; 
+	FONT-WEIGHT: lighter; 
+	VERTICAL-ALIGN: middle; 
+	HEIGHT:18;
+	width: 100%;
+}
+
+.textTrsp2  {BACKGROUND:transparent; width:100%; vertical-align: middle; border:0;text-align: center;}
+
+}
+
+TD.r {font-family:Arial; font-size: 9pt; color:red;font-weight: bold; height:19;
+BACKGROUND:#E8E8E8; TEXT-ALIGN:CENTER; BORDER-RIGHT: #A9A9A9 1px SOLID;
+BORDER-LEFT: #A9A9A9 1px SOLID; BORDER-TOP: #A9A9A9 2px SOLID; BORDER-BOTTOM:
+#A9A9A9 1px SOLID; height:19;}
+
+TD.g {font-family:Arial; font-size: 9pt; color:green;font-weight: bold; height:19;
+BACKGROUND:#E8E8E8; TEXT-ALIGN:CENTER; BORDER-RIGHT: #A9A9A9 1px SOLID;
+BORDER-LEFT: #A9A9A9 1px SOLID; BORDER-TOP: #A9A9A9 2px SOLID; BORDER-BOTTOM:
+#A9A9A9 1px SOLID; height:19;}
+
+TR.A_DOUBLE {FONT:9PT; FONT-FAMILY:Arial;  height:38;  cursor:hand; BACKGROUND:#FAFAFA;}
+TR.B_DOUBLE {FONT:9PT; FONT-FAMILY:Arial;  height:38;  cursor:hand; BACKGROUND:#F4F4F4; }
+
